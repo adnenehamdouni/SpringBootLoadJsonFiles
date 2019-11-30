@@ -25,9 +25,10 @@ public class SpringBootLoadJsonFilesApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        LOGGER.info("----- START Run Application -- START RETREIVE DATA -----");
         jsonUtils = JsonUtils.getInstance();
-        UserContextProperties userContextProperties = jsonUtils.loadJsonFile();
+        UserContextProperties userContextProperties = jsonUtils.getUserContextProperties();
         LOGGER.info("EXECUTING : command line runner with userContext = {}", MyUtils.convertObjectToString(userContextProperties));
-
+        LOGGER.info("----- START Run Application -- FINISH RETREIVE DATA -----");
     }
 }

@@ -22,20 +22,22 @@ public class JsonUtils implements Serializable {
     /** Don't let anyone else instantiate this class */
     private JsonUtils(){}
 
+    private static UserContextProperties userContextProperties = null;
+
     private static JsonUtils singletonInstance;
 
     /** Lazily create the instance / initialize the singleton in a synchronized block when it is accessed for the first time */
     public static synchronized JsonUtils getInstance(){
         if(singletonInstance == null){
+            LOG.info("JsonUtils: getInstance ---------> Instantiate new JsonUtils Class");
             singletonInstance = new JsonUtils();
+            loadJsonFile();
         }
         return singletonInstance;
     }
 
-    public static UserContextProperties loadJsonFile() {
-
-        UserContextProperties userContextProperties = null;
-
+    private static UserContextProperties loadJsonFile() {
+        LOG.info("JsonUtils: loadJsonFile ---------> Load Data for the first time");
         TypeReference<UserContextProperties> typeReference = new TypeReference<UserContextProperties>(){};
         //TypeReference<List<ArticleDTO>> typeReference = new TypeReference<List<ArticleDTO>>(){};
 
@@ -58,5 +60,7 @@ public class JsonUtils implements Serializable {
         return singletonInstance;
     }
 
-
+    public UserContextProperties getUserContextProperties() {
+        return userContextProperties;
+    }
 }

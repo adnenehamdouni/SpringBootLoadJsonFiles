@@ -27,7 +27,7 @@ public class JsonUtilsTest {
 
     @Test
     public void testLoadUserContext(){
-        userContextProperties = jsonUtils.loadJsonFile();
+        userContextProperties = jsonUtils.getUserContextProperties();
         assertThat(userContextProperties).isNotNull();
     }
 }

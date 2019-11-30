@@ -48,7 +48,7 @@ public class JsonUtils_AllFielsNotNullTest {
     @Test
     public void shouldGetJsonContent_andTestAllFieldsNotNull() {
         // Given
-        UserContextProperties userContextProperties = jsonUtils.loadJsonFile();
+        UserContextProperties userContextProperties = jsonUtils.getUserContextProperties();
 
         // When
         // Then
