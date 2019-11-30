@@ -1,0 +1,30 @@
+{
+  "status": "501",
+  "message": "Return all articles",
+  "articles": [
+    {
+      "id": 1,
+      "name": "article 1",
+      "author": "author 1",
+      "createdAt": "2019-10-08T07:07:19.000+0000",
+      "updatedAt": "2019-10-08T07:07:19.000+0000",
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "name": "article 2",
+      "author": "author 2",
+      "createdAt": "2019-09-30T22:00:00.000+0000",
+      "updatedAt": "2019-09-30T22:00:00.000+0000",
+      "deleted": false
+    },
+    {
+      "id": 3,
+      "name": "article 3",
+      "author": "author 3",
+      "createdAt": "2019-10-08T07:24:32.000+0000",
+      "updatedAt": "2019-10-08T07:24:32.000+0000",
+      "deleted": true
+    }
+  ]
+}
